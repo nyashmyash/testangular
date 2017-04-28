@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title ng-bind="details.source"></title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+
+  <body>   
+    <div class="container-fluid outerdiv">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" ><span class="span-style">News Browser</span></a>
+          </div>
+        </div>
+      </nav>
+	 <a  href="#/main">Main news</a>
+	 <a  href="#/saveforlater">Saved news</a>
+	 <a  href="#/addnews">Add news</a>
+	 <a  href="#/modifynews">Delete news</a>
+      <noscript>
+        <div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+      </noscript>
+         
+	  <ng-view></ng-view>
+    </div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

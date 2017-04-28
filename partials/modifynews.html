@@ -1,0 +1,14 @@
+<div class="animated zoomInRight">
+        <table> 
+		<tr> 
+				<th>Title</th>
+				<th>Text</th>
+				<th></th>
+		</tr> 
+		 <tr ng-repeat="x in addsnews">
+				<td >{{x.title}}</td>
+				<td >{{x.text}}</td>
+				<td > <button ng-click="delNews(x.id)">Delete</button></td>
+			</tr>
+		  </table>
+   </div>

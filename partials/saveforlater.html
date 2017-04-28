@@ -1,0 +1,19 @@
+<div class="animated zoomInRight">
+        <table> 
+		<tr> <th> Image </th>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Link </th>
+				<th>Time published</th>
+		</tr> 
+		 <tr ng-repeat="x in savnews">
+				<td> <img ng-src="{{ x.urlToImage }}"  height="100" width="200"></td>
+				<td>{{x.author}}</td>
+				<td>{{x.title}}</td>
+				<td>{{x.description}}</td>
+				<td><a href="{{x.url}}">link </a></td>
+				<td>{{x.publishedAt}}</td>
+			</tr>
+		  </table>
+		</div>
