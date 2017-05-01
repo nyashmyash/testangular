@@ -5,25 +5,7 @@
 		</div>
 
 		<div ng-if="details.status==='ok'">
-		<table> 
-		<tr> <th> Image </th>
-				<th>Author</th>
-				<th>Title</th>
-				<th>Description</th>
-				<th>Link </th>
-				<th>Time published</th>
-				<th></th>
-		</tr> 
-		 <tr ng-repeat="x in details.articles">
-				<td> <img ng-src="{{ x.urlToImage }}"  height="100" width="200"></td>
-				<td>{{x.author}}</td>
-				<td>{{x.title}}</td>
-				<td>{{x.description}}</td>
-				<td><a href="{{x.url}}">link </a></td>
-				<td>{{x.publishedAt}}</td>
-				<td> <button ng-click="sendNews($index)">Send to Local</button></td>
-			</tr>
-		  </table>
+			<g-list data="details.articles" fnd={{search}} send = "sendNews">
 		</div>
 
 		<div ng-if="details.status==='error'">

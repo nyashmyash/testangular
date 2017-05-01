@@ -1,0 +1,19 @@
+<table class="hovertable">
+<tr> <th> Image </th>
+				<th>Author</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Link </th>
+				<th>Time published</th>
+				<th></th>
+		</tr> 
+    <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';" ng-repeat="x in data">
+			<td> <img ng-src="{{ x.urlToImage }}"  height="100" width="200"></td>
+			<td>{{x.author}}</td>
+			<td>{{x.title}}</td>
+			<td>{{x.description}}</td>
+			<td><a href="{{x.url}}">link </a></td>
+			<td>{{x.publishedAt}}</td>
+			<td> <button ng-click="send($index)">Send to Local</button></td>
+	</tr>
+</table>
